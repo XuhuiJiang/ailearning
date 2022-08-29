@@ -15,6 +15,11 @@ import matplotlib.pyplot as plt
 from numpy import *
 from matplotlib.colors import ListedColormap
 from sklearn import neighbors, datasets
+# import warnings filter
+from warnings import simplefilter
+# ignore all future warnings
+simplefilter(action='ignore', category=FutureWarning)
+
 
 n_neighbors = 3
 
@@ -35,8 +40,8 @@ y = iris.target
 h = .02  # 网格中的步长
 
 # 创建彩色的图
-cmap_light = ListedColormap(['#FFAAAA', '#AAFFAA', '#AAAAFF'])
-cmap_bold = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
+cmap_light = ListedColormap(['#FFAAAA', '#AAFFAA', '#AAAAFF'])#点
+cmap_bold = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])#区域色块
 
 # cmap_light = ListedColormap(['#FFAAAA', '#AAFFAA'])
 # cmap_bold = ListedColormap(['#FF0000', '#00FF00'])

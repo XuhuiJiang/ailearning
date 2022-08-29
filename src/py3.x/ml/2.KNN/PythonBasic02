@@ -1,0 +1,19 @@
+a=1
+b=a
+print(id(a))
+print(id(b))
+b="money"
+print(a)
+print(b)
+print(id(a))
+print(id(b))
+
+#if条件
+year=400
+print(type(year))
+if year%400==0:
+    print("是闰年")
+elif year%4==0 and year%100!=0:
+    print("也是闰年")
+else:
+    print("不是闰年")
