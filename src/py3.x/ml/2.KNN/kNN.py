@@ -56,10 +56,10 @@ def classify0(inX, dataSet, labels, k):
     #获得到数据集的个数为4个
     # tile生成和训练样本对应的矩阵，并与训练样本求差
     """
-    tile: 列-3表示复制的行数， 行-1／2表示对inx的重复的次数
+    tile: 值为3的列表示复制的行数， 值为1或2表示对输入向量inx的重复的次数
     tile作用：将1行拉长成4行，即将向量拉成矩阵
 
-    In [8]: tile(inx, (3, 1))
+    In [8]: tile(inx, (3, 1)) inx:[1,2,3]
     Out[8]:
     array([[1, 2, 3],
         [1, 2, 3],
@@ -71,6 +71,7 @@ def classify0(inX, dataSet, labels, k):
         [1, 2, 3, 1, 2, 3],
         [1, 2, 3, 1, 2, 3]])
     """
+    # dataSetSize为4表示有4⃣️个，给他拉成4行，矩阵
     diffMat = tile(inX, (dataSetSize, 1)) - dataSet
     """
     欧氏距离:  点到点之间的距离
